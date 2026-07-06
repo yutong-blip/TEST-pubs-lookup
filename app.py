@@ -50,7 +50,7 @@ try:
     with st.spinner("⏳ Downloading the latest data from the database automatically..."):
         agg_df = load_and_process_data(CSV_URL)
     
-    st.success("✅ Database loaded successfully! Model ready.")
+    st.success("✅ Database from 1st June to 1st July loaded successfully! Model ready.")
 
     # Interactive Web Input
     user_input = st.text_input("👉 Paste an Offer Title (e.g., 'US - CPE - APP - AOS - Game'):")
@@ -74,7 +74,7 @@ try:
                            (agg_df['OS'] == req_os)]
 
             if match.empty:
-                st.warning(f"👽 No historical data found for segment haha, try to find it out yourself [{req_geo} / {req_model} / {req_flow} / {req_os}].")
+                st.warning(f"👽 No historical data found for segment. Haha, try to find it out yourself [{req_geo} / {req_model} / {req_flow} / {req_os}].")
             else:
                 # Filter valid publishers and sort by Revenue & EPC
                 valid_pubs = match[match['Clicks'] > 0]
