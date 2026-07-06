@@ -74,7 +74,7 @@ try:
                            (agg_df['OS'] == req_os)]
 
             if match.empty:
-                st.warning(f"👽 No historical data found for segment [{req_geo} / {req_model} / {req_flow} / {req_os}].")
+                st.warning(f"👽 No historical data found for segment haha, try to find it out yourself [{req_geo} / {req_model} / {req_flow} / {req_os}].")
             else:
                 # Filter valid publishers and sort by Revenue & EPC
                 valid_pubs = match[match['Clicks'] > 0]
